@@ -134,6 +134,7 @@
     <Content Include="captcha\HHVCode.aspx" />
     <Content Include="common\themes.aspx" />
     <Content Include="Admin\Login.aspx" />
+    <Content Include="database\NewPro.sql" />
     <Content Include="index.aspx" />
     <Content Include="res\css\common.css" />
     <Content Include="res\css\index.css" />
