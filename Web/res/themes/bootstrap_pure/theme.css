@@ -185,8 +185,7 @@
 }
 
 /* CheckBox - RadioButton */
-.f-checkbox.f-checked,
-.f-checkbox.f-checkbox-indeterminate {
+.f-checkbox.f-checked {
     background-color: #428BCA;
     border-color: #428BCA;
 }
@@ -648,8 +647,4 @@
 
 body.f-body-bgcolor {
     background-color: #eee;
-}
-
-.f-grid-row.f-grid-row-newadded > .f-grid-cell:first-child > .f-grid-cell-inner:after {
-	color: #428BCA;
 }

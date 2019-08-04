@@ -24,7 +24,7 @@
                     <Items>
                         <f:Tree runat="server" ID="TMailList" OnNodeCommand="TMailList_NodeCommand" ShowHeader="false">
                             <Toolbars>
-                                <f:Toolbar runat="server">
+                                   <f:Toolbar runat="server" CssStyle="background-color:#ddd;">
                                     <Items>
 
                                         <f:Label runat="server" ID="lbltext" Text="栏目列表"></f:Label>
@@ -42,12 +42,13 @@
                         <f:Grid ID="Grid" EnableCollapse="false" PageSize="15" ShowPagingMessage="true" AllowPaging="true" IsDatabasePaging="true" OnPageIndexChange="Grid_PageIndexChange"
                             runat="server" DataKeyNames="Id" ShowHeader="false" OnRowCommand="Grid_RowCommand">
                             <Toolbars>
-                                <f:Toolbar runat="server">
+                                <f:Toolbar runat="server" CssStyle="background-color:#ddd;">
                                     <Items>
-                                        <f:ToolbarFill ID="ToolbarFill1" runat="server">
-                                        </f:ToolbarFill>
+                                       
                                         <f:TextBox runat="server" ID="txtValue" LabelWidth="150" Label="输入图片标题"></f:TextBox>
                                         <f:Button runat="server" ID="btnSelect" Text="刷新" Icon="Zoom" OnClick="btnSelect_Click"></f:Button>
+                                         <f:ToolbarFill ID="ToolbarFill1" runat="server">
+                                        </f:ToolbarFill>
                                         <f:Button runat="server" ID="btnTes" Text="添加图片" Icon="Add" OnClick="btnAdd_Click"></f:Button>
 
                                     </Items>

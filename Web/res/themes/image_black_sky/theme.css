@@ -190,7 +190,6 @@
 .f-tabstrip-header .f-tabstrip-header-inkbar {
     background-color: #2b7dbc;
 }
-
 .f-tabstrip-inkbar > .f-tabstrip-header .f-tab-header.f-state-active {
     background-color: #fafafa;
 }
@@ -207,8 +206,7 @@
     }*/
 
 /* CheckBox - RadioButton */
-.f-checkbox.f-checked,
-.f-checkbox.f-checkbox-indeterminate {
+.f-checkbox.f-checked {
     background-color: #00599F;
     border-color: #00599F;
 }
@@ -357,29 +355,21 @@
 .bgpanel .f-widget-content,
 .bgpanel a,
 .bgpanel .f-icon {
-    color: rgba(255, 255, 255, 0.9);
+	color: rgba(255, 255, 255, 0.9);
 }
 
-.f-ie8 .bgpanel .f-widget-header,
-.f-ie8 .bgpanel .f-widget-content,
-.f-ie8 .bgpanel a,
-.f-ie8 .bgpanel .f-icon {
-    color: #fff;
-}
-
-
-.bgpanel a:hover,
-.bgpanel .f-state-hover,
-.bgpanel .f-state-hover a,
-.bgpanel .f-state-hover .f-icon,
-.bgpanel .f-state-focus,
-.bgpanel .f-state-focus a,
-.bgpanel .f-state-focus .f-icon,
-.bgpanel .f-state-active,
-.bgpanel .f-state-active a,
-.bgpanel .f-state-active .f-icon {
-    color: #fff;
-}
+    .bgpanel a:hover,
+    .bgpanel .f-state-hover,
+    .bgpanel .f-state-hover a,
+    .bgpanel .f-state-hover .f-icon,
+    .bgpanel .f-state-focus,
+    .bgpanel .f-state-focus a,
+    .bgpanel .f-state-focus .f-icon,
+    .bgpanel .f-state-active,
+    .bgpanel .f-state-active a,
+    .bgpanel .f-state-active .f-icon {
+        color: #fff;
+    }
 
 .bgpanel .f-mainheader {
     background-color: rgba(128, 128, 128, 0.2);
@@ -408,7 +398,6 @@
 
 
 /* Custom scrollbar */
-/*
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
@@ -435,9 +424,9 @@
     ::-webkit-scrollbar-thumb:active {
         background-color: rgba(0, 0, 0, .3);
     }
-*/
 
 
+	
 
 
 /* Special - progressbar */
@@ -449,8 +438,3 @@
     .f-progressbar .f-progressbar-value {
         background-color: #2b7dbc;
     }
-
-
-.f-grid-row.f-grid-row-newadded > .f-grid-cell:first-child > .f-grid-cell-inner:after {
-	color: #00599F;
-}

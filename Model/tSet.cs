@@ -20,6 +20,8 @@ namespace Maticsoft.Model
 		private string _address;
 		private string _beian;
 		private string _remark;
+		private string _postcpde;
+		private string _wechart;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -99,6 +101,22 @@ namespace Maticsoft.Model
 		{
 			set{ _remark=value;}
 			get{return _remark;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string PostCpde
+		{
+			set{ _postcpde=value;}
+			get{return _postcpde;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string WeChart
+		{
+			set{ _wechart=value;}
+			get{return _wechart;}
 		}
 		#endregion Model
 

@@ -6,6 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+  
 </head>
 <body>
     <form id="form1" runat="server">
@@ -19,7 +20,7 @@
                     <Items>
                         <f:Tree runat="server" ID="TMailList" OnNodeCommand="TMailList_NodeCommand" ShowHeader="false">
                             <Toolbars>
-                                <f:Toolbar runat="server">
+                                <f:Toolbar runat="server" CssStyle="background-color:#ddd;">
                                     <Items>
 
                                         <f:Label runat="server" ID="lbltext" Text="栏目列表"></f:Label>
@@ -37,7 +38,7 @@
                         <f:Grid ID="Grid" EnableCollapse="false" PageSize="15" ShowPagingMessage="true" AllowPaging="true" IsDatabasePaging="true" OnPageIndexChange="Grid_PageIndexChange"
                             runat="server" DataKeyNames="Id" ShowHeader="false" OnRowCommand="Grid_RowCommand">
                             <Toolbars>
-                                <f:Toolbar runat="server">
+                                <f:Toolbar runat="server" CssStyle="background-color:#ddd;">
                                     <Items>
                                         <f:TextBox runat="server" ID="txtValue" Label="按标题搜索" LabelWidth="150"></f:TextBox>
                                         <f:Button runat="server" ID="btnSelect" Text="刷新" OnClick="btnSelect_Click" Icon="Zoom"></f:Button>

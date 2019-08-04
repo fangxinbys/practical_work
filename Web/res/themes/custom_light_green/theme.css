@@ -296,7 +296,3 @@
 body.f-body-bgcolor {
     background-color: #f3f3f3;
 }
-
-.f-grid-row.f-grid-row-newadded > .f-grid-cell:first-child > .f-grid-cell-inner:after {
-	color: #72b42d;
-}

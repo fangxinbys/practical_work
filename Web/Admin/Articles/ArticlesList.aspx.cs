@@ -154,7 +154,8 @@ namespace Maticsoft.Web.Admin.Articles
             {
                 Alert.ShowInTop("请选择子文章栏目!"); return;
             }
-            PageContext.RegisterStartupScript(Window1.GetShowReference(string.Format("ArticlesEdit.aspx?tyId={0}", TMailList.SelectedNodeID)),"添加文章");
+     
+            PageContext.RegisterStartupScript(Window1.GetShowReference(string.Format("./ArticlesEdit.aspx?tyId={0}", TMailList.SelectedNodeID)) );
         }
 
         protected void btnSelect_Click(object sender, EventArgs e)
@@ -221,7 +222,7 @@ namespace Maticsoft.Web.Admin.Articles
             if (e.CommandName == "Edit")
             {
  
-                PageContext.RegisterStartupScript(Window1.GetShowReference("ArticlesEdit.aspx?Id=" + artId), "文章编辑");
+                PageContext.RegisterStartupScript(Window1.GetShowReference("ArticlesEdit.aspx?Id=" + artId));
             }
         }
 

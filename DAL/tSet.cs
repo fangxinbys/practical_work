@@ -46,9 +46,9 @@ namespace Maticsoft.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into tSet(");
-			strSql.Append("WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark)");
+			strSql.Append("WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark,PostCpde,WeChart)");
 			strSql.Append(" values (");
-			strSql.Append("@WebName,@Copyright,@KeyWords,@Description,@Tel,@Email,@Address,@BeiAn,@Remark)");
+			strSql.Append("@WebName,@Copyright,@KeyWords,@Description,@Tel,@Email,@Address,@BeiAn,@Remark,@PostCpde,@WeChart)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@WebName", SqlDbType.NVarChar,150),
@@ -59,7 +59,9 @@ namespace Maticsoft.DAL
 					new SqlParameter("@Email", SqlDbType.NVarChar,350),
 					new SqlParameter("@Address", SqlDbType.NVarChar,350),
 					new SqlParameter("@BeiAn", SqlDbType.NVarChar,350),
-					new SqlParameter("@Remark", SqlDbType.NVarChar,350)};
+					new SqlParameter("@Remark", SqlDbType.NVarChar,350),
+					new SqlParameter("@PostCpde", SqlDbType.NVarChar,350),
+					new SqlParameter("@WeChart", SqlDbType.NVarChar,350)};
 			parameters[0].Value = model.WebName;
 			parameters[1].Value = model.Copyright;
 			parameters[2].Value = model.KeyWords;
@@ -69,6 +71,8 @@ namespace Maticsoft.DAL
 			parameters[6].Value = model.Address;
 			parameters[7].Value = model.BeiAn;
 			parameters[8].Value = model.Remark;
+			parameters[9].Value = model.PostCpde;
+			parameters[10].Value = model.WeChart;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -95,7 +99,9 @@ namespace Maticsoft.DAL
 			strSql.Append("Email=@Email,");
 			strSql.Append("Address=@Address,");
 			strSql.Append("BeiAn=@BeiAn,");
-			strSql.Append("Remark=@Remark");
+			strSql.Append("Remark=@Remark,");
+			strSql.Append("PostCpde=@PostCpde,");
+			strSql.Append("WeChart=@WeChart");
 			strSql.Append(" where Id=@Id");
 			SqlParameter[] parameters = {
 					new SqlParameter("@WebName", SqlDbType.NVarChar,150),
@@ -107,6 +113,8 @@ namespace Maticsoft.DAL
 					new SqlParameter("@Address", SqlDbType.NVarChar,350),
 					new SqlParameter("@BeiAn", SqlDbType.NVarChar,350),
 					new SqlParameter("@Remark", SqlDbType.NVarChar,350),
+					new SqlParameter("@PostCpde", SqlDbType.NVarChar,350),
+					new SqlParameter("@WeChart", SqlDbType.NVarChar,350),
 					new SqlParameter("@Id", SqlDbType.Int,4)};
 			parameters[0].Value = model.WebName;
 			parameters[1].Value = model.Copyright;
@@ -117,7 +125,9 @@ namespace Maticsoft.DAL
 			parameters[6].Value = model.Address;
 			parameters[7].Value = model.BeiAn;
 			parameters[8].Value = model.Remark;
-			parameters[9].Value = model.Id;
+			parameters[9].Value = model.PostCpde;
+			parameters[10].Value = model.WeChart;
+			parameters[11].Value = model.Id;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -181,7 +191,7 @@ namespace Maticsoft.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark from tSet ");
+			strSql.Append("select  top 1 Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark,PostCpde,WeChart from tSet ");
 			strSql.Append(" where Id=@Id");
 			SqlParameter[] parameters = {
 					new SqlParameter("@Id", SqlDbType.Int,4)
@@ -249,6 +259,14 @@ namespace Maticsoft.DAL
 				{
 					model.Remark=row["Remark"].ToString();
 				}
+				if(row["PostCpde"]!=null)
+				{
+					model.PostCpde=row["PostCpde"].ToString();
+				}
+				if(row["WeChart"]!=null)
+				{
+					model.WeChart=row["WeChart"].ToString();
+				}
 			}
 			return model;
 		}
@@ -259,7 +277,7 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark ");
+			strSql.Append("select Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark,PostCpde,WeChart ");
 			strSql.Append(" FROM tSet ");
 			if(strWhere.Trim()!="")
 			{
@@ -279,7 +297,7 @@ namespace Maticsoft.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark ");
+			strSql.Append(" Id,WebName,Copyright,KeyWords,Description,Tel,Email,Address,BeiAn,Remark,PostCpde,WeChart ");
 			strSql.Append(" FROM tSet ");
 			if(strWhere.Trim()!="")
 			{

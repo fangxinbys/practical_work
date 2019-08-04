@@ -21,9 +21,9 @@ namespace Maticsoft.Web.Code
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-
-                sb.Append("<img src=" + dt.Rows[i]["Code"].ToString().Replace("~/", "../") + " />");
-
+              sb.Append("<li>"); 
+              sb.Append("<img src=" + dt.Rows[i]["Code"].ToString().Replace("~/", "../") + " />");
+              sb.Append("</li>");
             }
 
             return sb.ToString();
@@ -32,8 +32,8 @@ namespace Maticsoft.Web.Code
         {
             Maticsoft.BLL.tAbout BLL = new Maticsoft.BLL.tAbout();
             Maticsoft.Model.tAbout model = BLL.GetModel(id);
-            model.Click = (model.Click + 1);
-            BLL.Update(model);
+            //model.Click = (model.Click + 1);
+            //BLL.Update(model);
             return model;
 
         }

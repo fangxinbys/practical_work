@@ -63,6 +63,16 @@
                         <f:TextBox ID="BeiAn" Label="备案编号" runat="server" />
                     </Items>
                 </f:FormRow>
+                 <f:FormRow>
+                    <Items>
+                        <f:TextBox ID="YouBian" Label="邮编" runat="server" />
+                    </Items>
+                </f:FormRow>
+                 <f:FormRow>
+                    <Items>
+                        <f:TextBox ID="WeiXin" Label="微信" runat="server" />
+                    </Items>
+                </f:FormRow>
             </Rows>
 
         </f:Form>

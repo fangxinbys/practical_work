@@ -113,6 +113,7 @@
     <Compile Include="tMenu.cs" />
     <Compile Include="tPicture.cs" />
     <Compile Include="tPictureType.cs" />
+    <Compile Include="tReg.cs" />
     <Compile Include="tRole.cs" />
     <Compile Include="tRoleMenu.cs" />
     <Compile Include="tSet.cs" />
