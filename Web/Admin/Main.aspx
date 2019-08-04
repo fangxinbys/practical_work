@@ -5,7 +5,7 @@
 <html>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
+    <title><%=(model==null?"":model.WebName) %></title>
     <link href="~/res/css/index.css" rel="stylesheet" />
 </head>
 <body>

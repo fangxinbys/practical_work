@@ -1,42 +1,33 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Maticsoft.Web.index" %>
+﻿<!DOCTYPE html>
+<html lang="en">
 
-<%@ Register Src="~/control/header.ascx" TagPrefix="uc1" TagName="header" %>
-<%@ Register Src="~/control/footer.ascx" TagPrefix="uc1" TagName="footer" %>
-<%@ Register Src="~/control/contract.ascx" TagPrefix="uc1" TagName="contract" %>
-
-
-
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
-    <link rel="stylesheet" href="css/amazeui.min.css" />
-    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/common.css">
     <style>
         .am-slider-default .am-control-nav {
             bottom: 40px;
         }
 
-            .am-slider-default .am-control-nav li a {
-                width: 50px;
-                height: 4px;
-            }
-
-                .am-slider-default .am-control-nav li a.am-active {
-                    background-color: #fff;
-                }
-
-            .am-slider-default .am-control-nav li a {
-                background-color: #356aae;
-            }
-
-        @media screen and (max-width: 300px) {
+        .am-slider-default .am-control-nav li a {
+            width: 50px;
+            height: 4px;
         }
+
+        .am-slider-default .am-control-nav li a.am-active {
+            background-color: #fff;
+        }
+
+        .am-slider-default .am-control-nav li a {
+            background-color: #356aae;
+        }
+
+        @media screen and (max-width: 300px) {}
 
         @media screen and (min-width: 301px) and (max-width: 1000px) {
             .am-slider-default {
@@ -46,17 +37,96 @@
         }
     </style>
 </head>
+
 <body>
-    <uc1:header runat="server" id="header" />
-        <div>
+
+    <header class="">
+        <div class="am-container header-bc">
+            <div class="am-g">
+                <div class="col-lg-6 col-md-10">
+                    <div class="logo-content df f-ac">
+                        <div>
+                            <img src="images/logo.png" class="logo" alt="" srcset="">
+                        </div>
+                        <div class="logo-text-content">
+                            <div class="logo-title">中国高温合金产业技术创新战略联盟</div>
+                            <div class="logo-title-en">China Superalloy Innovation Strategic Alliance</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-10 tx-r header-right-content">
+                    <div class="header-link">
+                        <a>
+                            <span><img class="home-icon" src="images/home-icon_05.png" alt="" srcset=""></span>
+                            <a class="header-link-text" href="index.html">首&nbsp&nbsp&nbsp页</a>
+                        </a>
+                        <a class="header-link-text">|</a>
+                        <a class="header-link-text" href="other.html">联系我们</a>
+                    </div>
+                    <div class="header-ipt">
+                        <div class="w-100 df f-ac">
+                            <div class="w-100"><input type="text"></div>
+                            <div><button onclick="window.location.href= 'information.html'">搜索</button></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- 导航 -->
+    <nav>
+        <div class="am-container">
+            <div class="am-g">
+                <div class="col-lg-10">
+                    <div class="am-g nav-content ">
+                        <div class="col-lg-2 col-sm-3 col-md-2 nav-title nav-active">
+                            <a data-index="0" href="index.html">关于联盟</a>
+                            <div data-index="0" class="nav-title-childer tx-l uhide">
+                                <a href="information.html?active=0">理事长致辞</a>
+                                <a href="information.html?active=0">联盟简介</a>
+                                <a href="information.html?active=0">联盟章程</a>
+                                <a href="information.html?active=0">组织结构</a>
+                                <a href="information.html?active=0">专家委员会</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-sm-3 col-md-2 nav-title">
+                            <a data-index="1" href="business.html">业务介绍</a>
+                        </div>
+                        <div class="col-lg-2 col-sm-3 col-md-2 nav-title">
+                            <a data-index="2" href="information.html">资讯中心</a>
+                            <div data-index="0" class="nav-zixun-title-childer tx-l uhide">
+                                <a href="information.html?list=list&active=0">联盟动态</a>
+                                <a href="information.html?list=list&active=1">行业新闻</a>
+                                <a href="information.html?list=list&active=2">政策法规</a>
+                                <a href="information.html?list=list&active=3">展会资讯</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-sm-3 col-md-2 nav-title">
+                            <a data-index="3" href="member.html">联盟成员</a>
+                        </div>
+                        <div class="col-lg-2 col-sm-3 col-md-2 col-end nav-title">
+                            <a data-index="4" href="application.html">会员申请</a>
+                        </div>
+                        <!-- <div class="col-lg-2 col-sm-3 col-md-2 col-end nav-title">
+                            <a data-index="5" href="other.html">其他栏目</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </nav>
+    <div>
         <!-- 轮播 -->
         <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{}'>
             <ul class="am-slides">
                 <li>
-                    <img src="images/slider_02.png"/>
+                    <img src="images/slider_02.png">
                 </li>
                 <li>
-                    <img src="images/slider_02.png"/>
+                    <img src="images/slider_02.png">
                 </li>
             </ul>
         </div>
@@ -86,15 +156,14 @@
                     </div>
                 </div>
                 <!-- 列表2 -->
-                <div class="am-g " style="padding-bottom: 20px;">
+                <div class="am-g " style="padding-bottom:20px;">
                     <!-- 标题 -->
                     <div class="col-lg-6 pt-15">
                         <div class="df article-title-content">
                             <div class="fg-3">
                                 <span class=" article-title">联盟动态</span>
                             </div>
-                            <div class="fg-1 tx-r article-more">
-                                <a href="information.html?list=list&active=0">更多></a>
+                            <div class="fg-1 tx-r article-more"><a href="information.html?list=list&active=0">更多></a>
                             </div>
                         </div>
                         <!-- 内容 -->
@@ -119,19 +188,19 @@
                         <!-- 内容中列表 联盟动态 -->
                         <div class="details-list-content">
                             <a href="information.html?active=0" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">非晶联盟第二届第二次常务理事会在南京顺利召开</span></a>
+                                    class="pl-10">非晶联盟第二届第二次常务理事会在南京顺利召开</span></a>
                             <a href="information.html?active=0" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">非晶联盟第二届第二次联盟大会在南京顺利召开</span></a>
+                                    class="pl-10">非晶联盟第二届第二次联盟大会在南京顺利召开</span></a>
                             <a href="information.html?active=0" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">关于召开第六届非晶材料产业发展研讨会暨中国金属中国金属中国金属中国金属</span>
+                                    class="pl-10">关于召开第六届非晶材料产业发展研讨会暨中国金属中国金属中国金属中国金属</span>
                             </a>
                             <a href="information.html?active=0" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">关于召开非晶联盟第二届第二次联盟常务理事会暨盟大</span></a>
+                                    class="pl-10">关于召开非晶联盟第二届第二次联盟常务理事会暨盟大</span></a>
                             <a href="information.html?active=0" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">关于召开第六届非晶材料产业发展研讨会暨中国金属中国金属中国金属中国金属</span>
+                                    class="pl-10">关于召开第六届非晶材料产业发展研讨会暨中国金属中国金属中国金属中国金属</span>
                             </a>
                             <a href="information.html?active=0" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">非晶联盟第二届第二次联盟大会在南京顺利召开</span></a>
+                                    class="pl-10">非晶联盟第二届第二次联盟大会在南京顺利召开</span></a>
                         </div>
                     </div>
                     <!-- 标题 -->
@@ -140,8 +209,7 @@
                             <div class="fg-3">
                                 <span class=" article-title">行业新闻</span>
                             </div>
-                            <div class="fg-1 tx-r article-more">
-                                <a href="information.html?list=list&active=1">更多></a>
+                            <div class="fg-1 tx-r article-more"><a href="information.html?list=list&active=1">更多></a>
                             </div>
                         </div>
                         <!-- 内容 -->
@@ -166,28 +234,27 @@
                         <!-- 内容中列表 行业新闻 -->
                         <div class="details-list-content">
                             <a href="information.html?active=1" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">非晶联盟第二届第二次常务理事会在南京顺利召开</span></a>
+                                    class="pl-10">非晶联盟第二届第二次常务理事会在南京顺利召开</span></a>
                             <a href="information.html?active=1" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">非晶联盟第二届第二次联盟大会在南京顺利召开</span></a>
+                                    class="pl-10">非晶联盟第二届第二次联盟大会在南京顺利召开</span></a>
                             <a href="information.html?active=1" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">关于召开第六届非晶材料产业发展研讨会暨中国金属中国金属中国金属中国金属</span>
+                                    class="pl-10">关于召开第六届非晶材料产业发展研讨会暨中国金属中国金属中国金属中国金属</span>
                             </a>
                             <a href="information.html?active=1" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">关于召开非晶联盟第二届第二次联盟常务理事会暨盟大</span></a>
+                                    class="pl-10">关于召开非晶联盟第二届第二次联盟常务理事会暨盟大</span></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- 列表3 -->
-                <div class="am-g " style="padding-bottom: 20px;">
+                <div class="am-g " style="padding-bottom:20px;">
                     <!-- 标题 -->
                     <div class="col-lg-6 pt-15">
                         <div class="df article-title-content">
                             <div class="fg-3">
                                 <span class=" article-title">政策法规</span>
                             </div>
-                            <div class="fg-1 tx-r article-more">
-                                <a href="information.html?list=list&active=2">更多></a>
+                            <div class="fg-1 tx-r article-more"><a href="information.html?list=list&active=2">更多></a>
                             </div>
                         </div>
                         <!-- 内容 -->
@@ -212,12 +279,12 @@
                         <!-- 内容中列表 政策法规 -->
                         <div class="details-list-content">
                             <a href="information.html?active=2" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">关于召开非晶联盟第二届第二次联盟常务理事会暨盟大</span></a>
+                                    class="pl-10">关于召开非晶联盟第二届第二次联盟常务理事会暨盟大</span></a>
                             <a href="information.html?active=2" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">关于召开第六届非晶材料产业发展研讨会暨中国金属中国金属中国金属中国金属</span>
+                                    class="pl-10">关于召开第六届非晶材料产业发展研讨会暨中国金属中国金属中国金属中国金属</span>
                             </a>
                             <a href="information.html?active=2" class="tx-o-1"><i class="circular"></i><span
-                                class="pl-10">关于召开非晶联盟第二届第二次联盟常务理事会暨盟联盟常非晶联盟第二届第二次联盟常务理晶大</span></a>
+                                    class="pl-10">关于召开非晶联盟第二届第二次联盟常务理事会暨盟联盟常非晶联盟第二届第二次联盟常务理晶大</span></a>
                         </div>
                     </div>
                     <!-- 标题 -->
@@ -226,8 +293,7 @@
                             <div class="fg-3">
                                 <span class=" article-title">展会资讯</span>
                             </div>
-                            <div class="fg-1 tx-r article-more">
-                                <a href="information.html?list=list&active=3">更多></a>
+                            <div class="fg-1 tx-r article-more"><a href="information.html?list=list&active=3">更多></a>
                             </div>
                         </div>
                         <!-- 内容 -->
@@ -252,12 +318,12 @@
                         <!-- 内容中列表 -->
                         <div class="details-list-content">
                             <a href="information.html?active=3" class="tx-o-1"><i
-                                class="circular"></i><span class="pl-10">非晶联盟第二届第二次常务理事会在南京顺利召开</span> </a>
+                                    class="circular"></i><span class="pl-10">非晶联盟第二届第二次常务理事会在南京顺利召开</span> </a>
                             <a href="information.html?active=3" class="tx-o-1"><i
-                                class="circular"></i><span class="pl-10">非晶联盟第二届第二次联盟大会在南京顺利召开</span></a>
+                                    class="circular"></i><span class="pl-10">非晶联盟第二届第二次联盟大会在南京顺利召开</span></a>
                             <a href="information.html?active=3" class="tx-o-1"><i
-                                class="circular"></i><span class="pl-10">关于召开第六届非晶材料产业发展研讨会暨中国金属中国金属中国金属中国金属</span>
-                            </a>
+                                    class="circular"></i><span class="pl-10">关于召开第六届非晶材料产业发展研讨会暨中国金属中国金属中国金属中国金属</span> 
+                                </a>
                         </div>
                     </div>
                 </div>
@@ -274,8 +340,7 @@
                                 <span class=" article-title">联盟成员</span>
                             </div>
 
-                            <div class="fg-1 tx-r article-more">
-                                <a href="member.html">更多></a>
+                            <div class="fg-1 tx-r article-more"><a href="member.html">更多></a>
                             </div>
                         </div>
                         <div>
@@ -295,16 +360,78 @@
             <div class="col-lg-3 mt-15">
                 <div class="">
 
-                    <uc1:contract runat="server" id="contract" />
+                    <div class="join-content">
+                        <div class="df article-title-content">
+                            <div class="fg-3">
+                                <span class=" article-title">联系我们</span>
+                            </div>
+                        </div>
+                        <div class="address-content">
+                            <div class="df">
+                                <div class="fs-1 ddress-title">电话：</div>
+                                <div class="address-phone">+86-10-62182656</div>
+                            </div>
+                            <div class="df address-list">
+                                <div class="fs-1 ddress-title">邮编：</div>
+                                <div class="fs-1">100081</div>
+                            </div>
+                            <div class="df address-list">
+                                <div class="fs-1 ddress-title">邮箱：</div>
+                                <div class="fs-1">info@c-gia.org</div>
+                            </div>
+                            <div class="df address-list">
+                                <div class="fs-1 ddress-title">微信号：</div>
+                                <div class="fs-1">CGIA-2013(请备注单位姓名)</div>
+                            </div>
+                            <div class="df address-list">
+                                <div class="fs-1 ddress-title">微信号：</div>
+                                <div class="fs-1">SMXLM2013(请备注单位姓名)</div>
+                            </div>
+                            <div class="df address-list">
+                                <div class="address-title fs-1">地址：</div>
+                                <div class="fs-1">北京市海淀区大柳树南村19号</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
     </div>
-    <uc1:footer runat="server" id="footer" />
+    <footer data-am-widget="footer" class="am-footer am-footer-default" data-am-footer="{  }">
+        <div class="am-footer-switch">
+            <a href="other.html?active=0" class="am-footer-desktop">联系我们</a>
+            <span class="am-footer-divider">|</span>
+            <a href="other.html?active=1" class="am-footer-desktop">友情链接</a>
+            <span class="am-footer-divider">|</span>
+            <a href="other.html?active=2" class="am-footer-desktop">常见问题</a>
+            <span class="am-footer-divider">|</span>
+            <a href="other.html?active=3" class="am-footer-desktop">版权声明</a>
+            <span class="am-footer-divider">|</span>
+            <a href="other.html?active=4" class="am-footer-desktop">隐私及安全</a>
+        </div>
+        <div class="am-footer-miscs ">
+            <p>电话：+86-10-62182656</p>
+            <p>邮编：100081</p>
+            <p>Email：info@c-gia.org</p>
+            <p>地址：北京市海淀区大柳树南村19号</p>
+        </div>
+    </footer>
+    <!-- <div class="am-container">
+            <div class="am-g footer-link-content">
+                <div class="col-lg-2">友情链接：</div>
+                <div class="col-lg-2">内容内容</div>
+                <div class="col-lg-2">内容内容</div>
+                <div class="col-lg-2">内容内容</div>
+                <div class="col-lg-2">内容内容</div>
+                <div class="col-lg-2">内容内容</div>
+            </div>
+        </div> -->
     <script src="js/zepto.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/amazeui.min.js"></script>
     <script src="js/common.js"></script>
+ 
 </body>
+
 </html>
