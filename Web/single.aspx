@@ -70,5 +70,23 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/amazeui.min.js"></script>
     <script src="js/common.js"></script>
+<script>
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return unescape(r[2]); return null;
+        } 
+ 
+        $(function () {
+
+            if (GetQueryString("Id") == "7") {
+                $("#nav_2").addClass("nav-active").siblings().removeClass("nav-active");
+            }
+            else {
+                $("#nav_1").addClass("nav-active").siblings().removeClass("nav-active");
+            }
+          
+        });
+    </script>
 </body>
 </html>

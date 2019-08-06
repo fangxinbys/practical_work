@@ -64,9 +64,9 @@ namespace Maticsoft.Web
                 sb.Append("<span class=\"article-title\">" + m.Name + "</span>");
                 sb.Append("</div>");
                 sb.Append("<div class=\"fg-1 tx-r article-more\">");
-                sb.Append("<a href=\"pagenews.aspx?tId=" + m.Id + "\">更多></ a >");
-                sb.Append("</div >");
-                sb.Append("</div >");
+                sb.Append("<a href=\"pagenews.aspx?tId=" + m.Id + "\">更多></a>");
+                sb.Append("</div>");
+                sb.Append("</div>");
 
                 DataTable dt = web.GetArtByTid(m.Id, 6);
 

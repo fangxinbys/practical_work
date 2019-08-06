@@ -130,18 +130,17 @@
 
                         </div>
                         <asp:Button ID="btn" runat="server" Text="提交" class="applicatione-btn" OnClick="btn_Click" />
-                 
+
                     </form>
                 </div>
                 <!-- 内容 -->
                 <div id="details" class="pt-20 uhide pb-20">
                     <div class="bb-E0E0E0 pb-20">
                         <h3 class="tx-c">入盟须知</h3>
-                        <div class="tx-c fs-0-95 c-666666 pt-5">07/04/2019</div>
+                        <div class="tx-c fs-0-95 c-666666 pt-5"></div>
                     </div>
                     <div class="article-details t-n-30">
-                        2019年7月4日下午，国家新材料产业发展专家咨询委员会委员、石墨烯产业技术创新战略联盟秘书长李义春博士应邀出席中关村企业信用促进会CEO私享会，并做“走中国特色的石墨烯产业发展之路”的主题分享。
-                        本次会议由中关村企业信用促进会和石墨烯产业技术创新战略联盟（CGIA）共同主办，聚焦中国石墨烯产业现状、应用及市场机会，中关村企业信用促进会秘书长张九红客串本次活动的主持人并着重介绍了即将启动的北京市企业创新信用领跑行动，希望与会的优质企业和投资、金融机构共同参与这一针对信用“0瑕疵”高精尖企业的社会化激励行动。中兴通集团董事长朱元涛、北京石墨烯技术研究院院长王旭东、东旭光电产业集团史晨星等嘉宾进行了分享和交流。
+                        <asp:Literal ID="lit_content" runat="server"></asp:Literal>
                     </div>
 
                 </div>

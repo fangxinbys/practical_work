@@ -12,7 +12,13 @@ namespace Maticsoft.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
 
+                Maticsoft.BLL.tAbout BLL = new Maticsoft.BLL.tAbout();
+                Maticsoft.Model.tAbout menu = BLL.GetModel(8);
+                lit_content.Text = menu==null?"": menu.AboutContent;
+            }
         }
         /// <summary>
         /// 过滤标记

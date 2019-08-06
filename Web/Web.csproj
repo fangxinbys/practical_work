@@ -48,7 +48,7 @@
   <ItemGroup>
     <Reference Include="FineUIPro, Version=5.0.0.0, Culture=neutral, PublicKeyToken=9cbe753c029f291a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\FineUIPro.dll</HintPath>
+      <HintPath>D:\BaiduNetdiskDownload\Matic_Dev\Web\bin\FineUIPro.dll</HintPath>
     </Reference>
     <Reference Include="Maticsoft.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
